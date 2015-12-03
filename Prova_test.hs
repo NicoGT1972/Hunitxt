@@ -13,7 +13,9 @@
   
  
   cube :: Int -> Int
-  cube x = trace_same (show ("cube_fun: " ++ "cube_input: " ++ show (x) ++ " cube_output: ")) (x^3)
+  cube x =
+    trace_same ("input: " ++ show x ++ "output: ") $
+    (x^(3::Int))
   
   combine :: Int -> Int -> Int
   combine x y = ((cube x) + (cube y))
