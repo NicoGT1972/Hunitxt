@@ -39,3 +39,6 @@
                 [0,0]
                 Falsifiable (after 3 tests):                  
                 [1,0]
+
+# Prova_test per invocare capturing di parametri:
+  ghc -e "combine 3 4" Prova_test.hs 2> capture
