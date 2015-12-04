@@ -11,10 +11,9 @@
   trace_same :: Show a => String -> a -> a
   trace_same message x = trace (message ++ show x) x
 
-  trace_capture :: Show a => a -> a -> a
+  trace_capture :: Show a => [a] -> a -> a
   trace_capture parameters result =
-    trace ("(" ++ show parameters ++ "," ++ show result ++ "),") result
-  
+    trace ("(" ++ show (length parameters) ++ "," ++ show parameters ++ "," ++ show result ++ "),") result
  
   cube :: Int -> Int
   cube x =
