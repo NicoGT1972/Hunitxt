@@ -17,4 +17,4 @@
       ]
     return()
 
-  parse s = read ("[" ++ init s ++ "]")::[(Int,[Int],Int)]
+  parse s = read ("[" ++ (init $ init s) ++ "]")::[(Int,[Int],Int)]
