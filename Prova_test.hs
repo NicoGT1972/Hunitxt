@@ -18,7 +18,7 @@
   cube :: Int -> Int
   cube x =
 --    trace_same ("input:" ++ show x ++ " output:") $
-    trace_capture x $
+    trace_capture [x] $
     x^(3::Int)
   
   combine :: Int -> Int -> Int
