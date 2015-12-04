@@ -8,11 +8,13 @@
 
   test_all :: IO()
   test_all = do
-    captured <- readFile "Prove_test.cube_captured"
-    let (parameters, result) = parse captured in
-      runTestTT $ TestList [
-                  TestCase $ assertEqual "test Prova_test.cube" result (cube parameters)
-                ]
+    captured <- readFile "Prova_test.cube_captured"
+    runTestTT $
+      TestList [
+        TestCase $ assertEqual "test Prova_test.cube" result (cube parameters)
+        |
+        (_a,[parameters],result) <- parse captured
+      ]
     return()
 
-  parse s = (0, 0)
+  parse s = read ("[" ++ init s ++ "]")::[(Int,[Int],Int)]

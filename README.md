@@ -41,4 +41,5 @@
                 [1,0]
 
 # Prova_test per invocare capturing di parametri:
-  ghc -e "combine 3 4" Prova_test.hs 2> capture
+  ghc -e "combine 3 4" Prova_test.hs 2> Prova_test.cube_captured
+  ghc -e "test_all" Test_captured.hs
